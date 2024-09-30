@@ -1,1 +1,228 @@
-s o o n
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Coopr Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tiny5:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: black; /* Black background */
+      color: white;
+      font-family: 'Tiny5', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      margin: 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative; 
+      background: repeating-linear-gradient(
+        45deg,
+        #00FF99, /* Default stripe color */
+        #00FF99 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+
+    .box {
+      width: 300px;
+      padding: 20px;
+      border: 3px solid white;
+      border-radius: 10px;
+      background-color: #181818;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .box h2 {
+      margin-top: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .box p {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    /* Column Colors and Striped Background */
+    .column:nth-child(1) {
+      background-color: #FF0077; /* Pink */
+      background: repeating-linear-gradient(
+        45deg,
+        #FF0077, /* Pink stripe color */
+        #FF0077 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+
+    .column:nth-child(2) {
+      background-color: #00FF99; /* Green */
+      background: repeating-linear-gradient(
+        45deg,
+        #00FF99, /* Green stripe color */
+        #00FF99 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+
+    .column:nth-child(3) {
+      background-color: #FFFF00; /* Yellow */
+      background: repeating-linear-gradient(
+        45deg,
+        #FFFF00, /* Yellow stripe color */
+        #FFFF00 10px,
+        transparent 10px,
+        transparent 20px
+      );
+    }
+
+    /* Buttons */
+    .box button {
+      background-color: #00FF99; /* Default button color */
+      color: black;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      font-family: 'Tiny5', sans-serif;
+      font-weight: bold;
+    }
+
+    /* Button colors based on column */
+    .column:nth-child(1) .box button {
+      background-color: #FF0077; /* Pink button */
+    }
+
+    .column:nth-child(2) .box button {
+      background-color: #00FF99; /* Green button */
+    }
+
+    .column:nth-child(3) .box button {
+      background-color: #FFFF00; /* Yellow button */
+    }
+
+    /* Style for the "PROJECTS" title */
+    .box .title {
+      margin-bottom: 10px;
+      font-size: 32px;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* Banner */
+    .banner {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .banner img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Design (for smaller screens) */
+    @media (max-width: 768px) {
+      .box {
+        width: 100%;
+      }
+
+      .column {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <h1>Coopr Games</h1> 
+    <img src="banner .jpg" alt="Banner Image">
+  </div>
+
+  <div class="container">
+    <div class="column" id="column-1">
+      <div class="box" id="about">
+        <h2>About Me</h2>
+        <p>I'm a developer with a passion for creating web applications that are free to use.</p>
+        <p>I enjoy making music and sometimes games in my free time!</p>
+        <p>I have been making music since 2022 and developing since I could speak.</p>
+      </div>
+      <div class="box" id="project-1">
+        <h2>Project 1</h2>
+        <p>Description of Project 1</p>
+        <a href="https://your-project-1-link.com"><button>Link 1</button></a>
+        <a href="https://your-project-1-link-2.com"><button>Link 2</button></a>
+      </div>
+      <div class="box" id="project-3">
+        <h2>Project 3</h2>
+        <p>Description of Project 3</p>
+        <a href="https://your-project-3-link.com"><button>Link 1</button></a>
+        <a href="https://your-project-3-link-2.com"><button>Link 2</button></a>
+      </div>
+    </div>
+
+    <div class="column" id="column-2">
+      <div class="box" id="current-projects">
+        <div class="title">PROJECTS</div>
+        <div>TETR.IO</div>
+        <p>An online multiplayer stacker puzzle game. Play online in lobbies or challenge the scoreboards.</p>
+        <a href="https://your-project-tetrio-link.com"><button>Node.JS</button></a>
+        <a href="https://your-project-tetrio-link.com"><button>JS</button></a>
+        <a href="https://your-project-tetrio-link.com"><button>X</button></a>
+        <a href="https://your-project-tetrio-link.com"><button>Discord</button></a>
+        <a href="https://your-project-tetrio-link.com"><button>Homepage</button></a>
+        <div>TETRA CHANNEL</div>
+        <p>A standalone site to quickly view user data on TETR.IO.</p>
+        <a href="https://your-project-tetra-link.com"><button>Node.JS</button></a>
+        <a href="https://your-project-tetra-link.com"><button>JS</button></a>
+        <a href="https://your-project-tetra-link.com"><button>Homepage</button></a>
+      </div>
+    </div>
+
+    <div class="column" id="column-3">
+      <div class="box" id="abandoned-projects">
+        <h2>Abandoned Projects</h2>
+        <p>Project 1: Description of Project 1</p>
+        <p>Project 2: Description of Project 2</p>
+      </div>
+      <div class="box" id="project-2">
+        <h2>Project 2</h2>
+        <p>Description of Project 2</p>
+        <a href="https://your-project-2-link.com"><button>Link 1</button></a>
+        <a href="https://your-project-2-link-2.com"><button>Link 2</button></a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
