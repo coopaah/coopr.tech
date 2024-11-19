@@ -4,12 +4,12 @@
   <title>skate.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Tiny5:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: black;
       color: white;
-      font-family: 'Tiny5', sans-serif;
+      font-family: 'Funnel Display', sans-serif;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
@@ -26,23 +26,41 @@
       filter: brightness(50%);
     }
 
+    .navbar {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      position: relative;
+      z-index: 1;
+    }
+
+    .navbar h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
     .container {
       display: flex;
-      flex-direction: column;
-      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
       padding: 20px;
+      box-sizing: border-box;
       position: relative;
       z-index: 1;
     }
 
     .box {
-      width: 100%;
+      width: 60%;
       padding: 20px;
       border: 3px solid white;
       border-radius: 10px;
       background-color: #181818;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
     }
 
     .box:hover {
@@ -73,6 +91,10 @@
     <source src="Unknown.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+
+  <div class="navbar">
+    <h1>cooprtech</h1>
+  </div>
 
   <div class="container">
     <div class="box">
