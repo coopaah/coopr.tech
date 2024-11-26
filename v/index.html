@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Bio Link Page</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #f5f5f5;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: #2b2b2b;
+            padding: 20px;
+            border: 3px solid #d81b60;
+            border-radius: 10px;
+            box-shadow: 10px 10px 0px #555;
+            text-align: center;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            background-color: #d81b60;
+            padding: 10px;
+            border-bottom: 3px solid #ff4081;
+        }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 2px solid #ff4081;
+            border-radius: 5px 5px 0 0;
+            background-color: #880e4f;
+            margin-right: 5px;
+            box-shadow: 5px 5px 0px #333;
+            color: #f5f5f5;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .tab:hover {
+            background-color: #ff4081;
+            transform: scale(1.1);
+        }
+        .tab.active {
+            background-color: #2b2b2b;
+            border-bottom: 3px solid #2b2b2b;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border: 2px solid #ff4081;
+            border-top: none;
+            background-color: #2b2b2b;
+            border-radius: 0 0 10px 10px;
+            animation: fadeIn 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .particle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            animation: particleFly 0.4s ease-out forwards;
+        }
+        @keyframes particleFly {
+            from { opacity: 1; transform: translate(0, 0); }
+            to { opacity: 0; transform: translate(var(--dx), var(--dy)); }
+        }
+        .profile-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #2b2b2b;
+            margin: 20px auto;
+            width: 80%;
+            border: 3px solid #d81b60;
+            border-radius: 10px;
+            box-shadow: 10px 10px 0px #555;
+        }
+        .profile-column {
+            width: 45%;
+        }
+        .profile-column img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .social-buttons { 
+            display: flex; 
+            justify-content: center; 
+            gap: 10px; 
+            margin-top: 20px; 
+        } 
+        .social-button { 
+            padding: 10px 20px; 
+            border: 2px solid #ff4081;
+            background-color: #880e4f; 
+            color: #f5f5f5; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            transition: background-color 0.3s, transform 0.3s;
+         } 
+         .social-button:hover { 
+            background-color: #ff4081; 
+            transform: scale(1.1);
+         }
+        
+        .left-column, .right-column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .right-column h2 {
+            margin-top: 0;
+        }
+        .right-column p {
+            margin: 10px 0;
+        }
+        h1, h2, p {
+            margin: 10px 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #880e4f;
+            margin: 5px 0;
+            padding: 5px;
+            border: 2px solid #ff4081;
+            border-radius: 5px;
+            box-shadow: 5px 5px 0px #333;
+            color: #f5f5f5;
+        }
+        .click-to-enter {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #2b2b2b;
+            border: 3px solid #d81b60;
+            color: #f5f5f5;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="clickToEnter" class="click-to-enter" onclick="startExperience()">[Click to Enter]</div>
+    <div class="container" id="container" style="display:none;">
+        <h1>what do you want here if anything</h1>
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('page1', event)">Me</div>
+            <div class="tab" onclick="showTab('page2', event)">About Me</div>
+            <div class="tab" onclick="showTab('page3', event)">Portfolio</div>
+            <div class="tab" onclick="showTab('page4', event)">Socials</div>
+        </div>
+        <div id="page1" class="tab-content active">
+            <h2>Me</h2>
+            <p>awesome hi i hope you like it i will change anything you need and also theres music in the background but lmk what you want to put there are some limitations that i unfortunately cant control but lmk -- im going to keep this running on until chrome lets me sorry i cant control that either ok</p>
+        </div>
+        <div id="page2" class="tab-content">
+            <h2>About Me</h2>
+            <div class="profile-container">
+                <div class="profile-column left-column">
+                    <h2>lyn</h2>
+                    <p>she</p>
+                    <img src="path_to_image.jpg" alt="image?">
+                </div>
+                <div class="profile-column right-column">
+                    <p>obv tell me what you want here</p>
+                </div>
+            </div>
+        </div>
+        <div id="page3" class="tab-content">
+            <h2>Portfolio</h2>
+            <p>pls dont ask for a boring portfolio lol</p>
+            <ul>
+                <li>sdfgsdfgdfgsdfg</li>
+                <li>sfgsfgsdfgsdfgsdfg</li>
+                <li>gfdgsfgdfgdfg</li>
+            </ul>
+        </div>
+        <div id="page4" class="tab-content">
+            <div class="social-buttons"> <a href="https://www.instagram.com/14106lyn" target="_blank" class="social-button">Instagram</a> <a href="https://www.x.com/v_letical" target="_blank" class="social-button">Twitter</a> <a href="https://www.coopr.tech" target="_blank" class="social-button">made by</a> </div>
+
+        </div>
+    </div>
+    <audio id="backgroundMusic" src="your-music-file.mp3" loop></audio>
+    <script>
+        function startExperience() {
+            document.getElementById('clickToEnter').style.display = 'none';
+            document.getElementById('container').style.display = 'block';
+            document.getElementById('backgroundMusic').play();
+        }
+
+        function showTab(tabId, event) {
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            document.querySelector(`.tab[onclick="showTab('${tabId}', event)"]`).classList.add('active');
+            document.getElementById(tabId).classList.add('active');
+
+            createParticles(event.clientX, event.clientY);
+        }
+
+        function createParticles(x, y) {
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = `${x}px`;
+                particle.style.top = `${y}px`;
+
+                const angle = Math.random() * 2 * Math.PI;
+                const speed = Math.random() * 100 + 50;
+                const dx = Math.cos(angle) * speed;
+                const dy = Math.sin(angle) * speed + 100;
+
+                particle.style.setProperty('--dx', `${dx}px`);
+                particle.style.setProperty('--dy', `${dy}px`);
+
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 1500);
+            }
+        }
+    </script>
+</body>
+</html>
